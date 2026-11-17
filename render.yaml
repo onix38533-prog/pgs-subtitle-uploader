@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: pgs-subtitle-uploader
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    disk:
+      name: subtitle-data
+      mountPath: /app/data
+      sizeGB: 10
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /app/data
+      - key: ADMIN_USER
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADDON_KEY
+        sync: false
+      - key: BASE_URL
+        sync: false
