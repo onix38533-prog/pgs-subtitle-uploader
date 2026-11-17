@@ -1,0 +1,16 @@
+{
+  "name": "pgs-subtitle-uploader-vercel",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.0.0",
+    "@vercel/functions": "^2.0.0"
+  }
+}

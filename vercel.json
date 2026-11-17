@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/addon/:path*",
+      "destination": "/api/addon/:path*"
+    },
+    {
+      "source": "/files/:key/:id",
+      "destination": "/api/files/:key/:id"
+    }
+  ],
+  "functions": {
+    "api/[[...path]].js": {
+      "maxDuration": 60
+    }
+  }
+}
